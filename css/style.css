@@ -1,0 +1,97 @@
+/* 1. Блочная модель (Box-sizing) - ОБЯЗАТЕЛЬНО */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #2c3e50;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 20px;
+    /* 2. Размеры (Min/Max Width) */
+    max-width: 1000px;
+    min-width: 320px;
+    margin: 0 auto;
+}
+
+/* 3. Обтекание (Float) */
+.float-box {
+    float: left;
+    width: 150px;
+    height: 100px;
+    background: #3498db;
+    color: white;
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+/* 4. Позиционирование: Relative (родитель) */
+.image-wrapper {
+    position: relative;
+    width: 300px;
+    margin: 40px auto;
+}
+
+.main-pic {
+    width: 100%;
+    height: auto;
+    border: 5px solid white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* 5. Позиционирование: Absolute + Слой (Z-index) */
+.status-badge {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: #e74c3c;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    z-index: 10; /* Слой выше основного */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* 6. Позиционирование: Fixed */
+.btn-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 100; /* Самый верхний слой */
+}
+
+/* 7. Переполнение (Overflow) */
+.limited-text {
+    max-height: 80px;
+    min-height: 50px;
+    width: 250px;
+    overflow: auto; /* Появится прокрутка при переполнении */
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+h1, h2 {
+    text-align: center;
+    border-bottom: 2px solid #3498db;
+}
+
+a { color: #3498db; text-decoration: none; font-weight: bold; }
+a:hover { text-decoration: underline; }
